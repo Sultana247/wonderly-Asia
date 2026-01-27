@@ -1,0 +1,15 @@
+ 
+ .navbar-items:hover{
+    background-color: orange;
+    border-radius: 25px;
+}
+.navbar-items:focus{
+    background-color: orange;
+    border-radius: 25px;
+}
+.photo:hover + .hide {
+    display: block;
+}
+.hide{
+    display: none;
+}
