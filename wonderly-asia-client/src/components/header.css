@@ -2,10 +2,15 @@
  .navbar-items:hover{
     background-color: orange;
     border-radius: 25px;
+    padding: 10px 15px;
 }
 .navbar-items:focus{
     background-color: orange;
     border-radius: 25px;
+     padding: 10px 15px;
+}
+.navbar-items{
+     padding: 10px 15px;
 }
 .photo:hover + .hide {
     display: block;

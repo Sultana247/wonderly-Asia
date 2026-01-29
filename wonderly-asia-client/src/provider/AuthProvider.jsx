@@ -6,6 +6,7 @@ import auth from '../firebase/firebase.config';
 const AuthProvider = ({children}) => {
     const [user, setUser]=useState([]);
     const [loading, setLoading]=useState(true);
+    const [lightTheme, setLightTheme]=useState(false);
     // sing upwith email password
     const register =(email, password)=>{
         setLoading(true)
@@ -38,7 +39,9 @@ const AuthProvider = ({children}) => {
         register,
         loading,
         logout,
-        signinwithPopup
+        signinwithPopup,
+        lightTheme, 
+        setLightTheme
     }
     useEffect(()=>{
         const unsubscribe = onAuthStateChanged(auth, currentUser=>{
