@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router';
+import AuthContext from '../provider/AuthContext';
 
 const Footer = () => {
+    const {lightTheme}=useContext(AuthContext);
     return (
         <div className=''>
-            <footer className="footer footer-horizontal footer-center bg-base-200 text-base-content rounded p-10">
+            <footer className={lightTheme ? "footer footer-horizontal footer-center bg-base-200 text-base-content rounded p-10" : "footer footer-horizontal footer-center bg-black text-white rounded p-10"}>
                 <nav className="grid grid-flow-col gap-4">
                     <Link to={'/about'}className="link link-hover">About us</Link>
                     <Link to={'/about'} className="link link-hover">Contact</Link>

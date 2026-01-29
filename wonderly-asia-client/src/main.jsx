@@ -27,18 +27,18 @@ const router = createBrowserRouter([
       {
         path:'/',
         element: <Home></Home>,
-        loader: ()=>fetch('http://localhost:5000/touristSpots')
+        loader: ()=>fetch('https://wanderly-asia-server.vercel.app/touristSpots')
       },
       
       {
         path: '/tourist-spots',
         element: <TouristSpots></TouristSpots>,
-        loader: ()=>fetch('http://localhost:5000/touristSpots')   
+        loader: ()=>fetch('https://wanderly-asia-server.vercel.app/touristSpots')   
          },
       {
         path: '/tourist-spots/countrybased/:id',
         element: <CountryBasedSpots></CountryBasedSpots>,
-        loader: ({params})=>fetch(`http://localhost:5000/countries/${params.id}`)   
+        loader: ({params})=>fetch(`https://wanderly-asia-server.vercel.app/countries/${params.id}`)   
          },
       {
         path: '/add-tourist-spots',
@@ -60,12 +60,12 @@ const router = createBrowserRouter([
       {
         path:'/spot-details/:id',
         element:<SpotDetails></SpotDetails>,
-        loader: ({params})=>fetch(`http://localhost:5000/touristSpots/${params.id}`)
+        loader: ({params})=>fetch(`https://wanderly-asia-server.vercel.app/touristSpots/${params.id}`)
       },
       {
         path: '/updateTouristSpots/:id',
         element:<PrivateRoute><UpdateSpots></UpdateSpots></PrivateRoute>,
-        loader: ({params})=>fetch(`http://localhost:5000/touristSpots/${params.id}`)
+        loader: ({params})=>fetch(`https://wanderly-asia-server.vercel.app/touristSpots/${params.id}`)
       },
       {
         path:'*',

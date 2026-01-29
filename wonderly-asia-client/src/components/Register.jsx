@@ -45,7 +45,7 @@ const Register = () => {
                 console.log('profile updated',data);
                 const userInfo={name, email, password};
                 
-                fetch('http://localhost:5000/users',{
+                fetch('https://wanderly-asia-server.vercel.app/users',{
                     method: 'POST',
                     headers:{
                         'content-type':'application/json'

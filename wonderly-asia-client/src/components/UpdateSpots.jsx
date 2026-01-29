@@ -25,7 +25,7 @@ const UpdateSpots = () => {
         const newSpot = {touristSpotName, countryName, location, description, cost, season, travelTime, visitors, email, name, image}
        
         // mongodb update logic
-        fetch(`http://localhost:5000/touristSpots/${spotId}`,{
+        fetch(`https://wanderly-asia-server.vercel.app/touristSpots/${spotId}`,{
             method: 'PUT',
             headers: {
                 'content-type':'application/json'

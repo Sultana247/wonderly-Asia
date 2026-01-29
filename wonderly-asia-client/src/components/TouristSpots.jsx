@@ -23,7 +23,7 @@ const TouristSpots = () => {
     }
     
     return (
-        <div className='bg-orange-50 p-65'>
+        <div className='bg-orange-50 pt-65'>
             <div className=' max-w-6xl mx-auto'>
             {/* sort part */}
             <div className="dropdown">

@@ -19,7 +19,7 @@ const MyList = () => {
         }).then((result) => {
         if (result.isConfirmed) {
             // database deletion part
-            fetch(`http://localhost:5000/touristSpots/${id}`, {
+            fetch(`https://wanderly-asia-server.vercel.app/touristSpots/${id}`, {
             method: 'DELETE'
         })
         .then(res=>res.json())
@@ -41,7 +41,7 @@ const MyList = () => {
     }
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/touristSpots/email/${email}`)
+        fetch(`https://wanderly-asia-server.vercel.app/touristSpots/email/${email}`)
         .then(res=>res.json())
         .then(data=>{
             console.log(data)

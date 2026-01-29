@@ -9,7 +9,7 @@ const AddCountry = () => {
         const image = form.image.value;
         const country = {countryName, description, image}
         console.log(country);
-        fetch('http://localhost:5000/countries', {
+        fetch('https://wanderly-asia-server.vercel.app/countries', {
             method: 'POST',
             headers:{
                 'content-type': 'application/json'

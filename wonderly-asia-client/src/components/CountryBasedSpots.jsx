@@ -6,7 +6,7 @@ const CountryBasedSpots = () => {
     const {countryName}=country;
     const [touristSpots, setTouristSpots]= useState([]);
     useEffect(()=>{
-        fetch(`http://localhost:5000/touristSpots/country/${countryName}`)
+        fetch(`https://wanderly-asia-server.vercel.app/touristSpots/country/${countryName}`)
         .then(res=>res.json())
         .then(data=>{
             setTouristSpots(data)
